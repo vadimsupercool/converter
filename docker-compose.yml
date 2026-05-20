@@ -1,0 +1,10 @@
+services:
+  file-converter:
+    build: .
+    container_name: file-converter
+    restart: always
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./results:/app/results
